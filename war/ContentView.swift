@@ -9,13 +9,51 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        ZStack {
+            Image("background").ignoresSafeArea()
+            VStack {
+                Spacer()
+                Image("logo")
+                Spacer()
+                
+                HStack {
+                    Image("card3").padding()
+                    Image("card4").padding()
+                }
+                
+                Spacer()
+                Image("dealbutton")
+                Spacer()
+                
+                HStack {
+                    Spacer()
+                    VStack {
+                        Text("Player")
+                            .font(.title)
+                            .foregroundColor(Color.white)
+                        Text("0")
+                            .font(.largeTitle)
+                            .fontWeight(.bold)
+                            .foregroundColor(Color.white)
+                    }
+                    Spacer()
+                    VStack {
+                        Text("CPU").font(.title).foregroundColor(Color.white)
+                        
+                        Text("0")
+                            .font(.largeTitle)
+                            .fontWeight(.bold)
+                            .foregroundColor(Color.white)
+                    }
+                    Spacer()
+                }
+                Spacer()
+                
+            }.padding(.vertical, 50.0)
+            
+            
+           
         }
-        .padding()
     }
 }
 
